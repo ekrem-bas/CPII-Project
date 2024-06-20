@@ -1,14 +1,17 @@
-# Fixed Asset Registration System (FARS) #
+# Fixed Asset Registration System (FARS) <sub>(Computer Programming II Project)</sub>
 
+ 
 ## The Purpose of the Project:
 
 - The Fixed Asset Registration System aims to provide a comprehensive solution for managing fixed assets, user interactions, and data management through a series of Java classes and graphical user interface (GUI) pages, with the purpose of tracking the status of any company's fixed assets (user, when purchased, price, whether actively used, etc.) and the company's employees.
 
+
 ## Table of Contents
-- [Installation](README.md#installation)
-- [Usage](README.md#usage)
-- [Project Overview](README.md#project-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Overview](#project-overview)
 - [Classes and Pages](#classes-and-pages)
+
 
 ## Installation
 
@@ -19,23 +22,36 @@
     git clone https://github.com/ekrem-bas/CPII-Project.git
   ```
 
-2. Ensure you have the `Java Development Kit (JDK)` installed.
+2. Ensure you have the `Java Development Kit (JDK)` and [`MySQL`](https://dev.mysql.com/downloads/) installed .
 
-3. Open the project in your preferred Integrated Development Environment (IDE) such as `Apache Netbeans`.
+3. Open the project in your preferred Integrated Development Environment (IDE) such as `Apache NetBeans`.
+
 
 ## Usage
 
 - To use the project, open it in your IDE and run the `Page_Login` or the specific page you are working on. The application includes several GUI pages for managing fixed assets and user accounts.
 
+
 ## Project Overview
 
 - The Fixed Asset Registration System is designed to facilitate the management of fixed assets within an organization. It includes functionality for adding, updating, and exporting asset data, as well as managing user accounts and permissions. The project is structured around a set of Java classes that handle the core business logic and GUI pages that provide a user-friendly interface for interacting with the system.
+
 
 ## Classes and Pages
 
 **DatabaseManager.java**
  + **Purpose**: Manages database connections and operations.
  + **Details**: This class handles tasks such as connecting to the database, executing queries, and closing connections. It provides methods for common database operations and ensures that resources are properly managed.
+
+ >[!IMPORTANT]
+ > Please make sure to customize the database connection settings according to your environment. Modify the `URL`, `USERNAME`, and `PASSWORD` fields in the `DatabaseManager.java` class to match your database configuration.
+ > Also, update the `table names` in the `SQL Queries` within methods such as `register`, `login`, `delete`, etc., to reflect your own table names.
+
+```java
+private static final String URL = "jdbc:mysql://localhost:3306/your_database";
+private static final String USERNAME = "your_username";
+private static final String PASSWORD = "your_password";
+```
 
 **FixedAssets.java**
  + **Purpose**: Handles operations related to fixed assets.
@@ -76,9 +92,3 @@
 **SubPage_TermsOfService.java**
  + **Purpose**: Displays the terms of service.
  + **Details**: This subpage provides information about the application’s terms and conditions for users. It ensures that users are aware of their rights and responsibilities.
-
-
-
-
-
-
